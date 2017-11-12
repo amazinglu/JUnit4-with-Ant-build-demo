@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project default="run" name="TestNg Test" basedir=".">
+    <target name="test1">
+        <echo>TestNG test</echo>
+    </target>
+    <target name="run" depends="compile">
+        <java classname="com.company.Main">
+            <classpath path="staging"/>
+        </java>
+    </target>
+    <target name="compile">
+        <javac srcdir="./src" destdir="staging"/>
+    </target>
+</project>
